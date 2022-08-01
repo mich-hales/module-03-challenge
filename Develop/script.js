@@ -157,3 +157,11 @@ for (var i = 0; i < passwordLength; i++) {
   console.log(allChoices);
 }
 
+// Used join so the password wasn't separated by commas and return the password to complete the function
+var password = passwordCart.join("");
+  console.log(`Your password is: ${password}`);
+  return password;
+}
+
+
+
