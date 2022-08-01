@@ -146,3 +146,14 @@ else if (specialChars) {
   userChoices = special;
   console.log(userChoices);
 }
+
+// variable to include/display entire password 
+var passwordCart = [];
+
+// for loop to ensure random selection
+for (var i = 0; i < passwordLength; i++) {
+  var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+  passwordCart.push(allChoices);
+  console.log(allChoices);
+}
+
