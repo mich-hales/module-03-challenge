@@ -14,10 +14,10 @@ This application will create a random password based on user input.
  * The password will be written to the page.
 
 ## Website Link
-[Click Here](https://github.com/mich-hales/module-03-challenge) to try out the password generator!
+[Click Here](https://mich-hales.github.io/module-03-challenge/Develop/index.html) to try out the password generator!
 
 ## Repository Link
-[Click Here](https://mich-hales.github.io/module-03-challenge/Develop/index.html) to view the repository.
+[Click Here](https://github.com/mich-hales/module-03-challenge) to view the repository.
 
 ## Mock-Up
 Here is a screenshot of the web application.
