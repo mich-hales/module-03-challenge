@@ -124,3 +124,25 @@ else if (numberChars && specialChars) {
   userChoices = numbers.concat(special);
   console.log(userChoices);
 }
+
+// 1 option out of the 4 is selected
+
+else if (upperChars) {
+  userChoices = upperCase;
+  console.log(userChoices);
+}
+
+else if (lowerChars) {
+  userChoices = lowerCase;
+  console.log(userChoices);
+}
+
+else if (numberChars) {
+  userChoices = numbers;
+  console.log(userChoices);
+}
+
+else if (specialChars) {
+  userChoices = special;
+  console.log(userChoices);
+}
