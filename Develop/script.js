@@ -29,3 +29,31 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+// My Code
+function generatePassword() {
+  passwordLength = prompt("Choose between 8 and 128 characters for your password");
+  console.log(`Password Length: ${passwordLength}`);
+}
+
+if (!passwordLength) {
+  alert ("Required");
+} 
+
+else if (passwordLength < 8 || passwordLength > 128) {
+  passwordLength = prompt ("You must choose between 8 and 128 characters");
+  console.log(`Password Length: ${passwordLength}`);
+}
+
+else {
+  upperChars = confirm("Click OK if you would like to include uppercase characters");
+  console.log(`Uppercase: ${upperChars}`);
+  lowerChars = confirm("Click OK if you would like to include lowercase characters");
+  console.log(`Lowercase: ${lowerChars}`);
+  numberChars = confirm("Click OK if you would like to include numerical characters");
+  console.log(`Numerical Characters: ${numberChars}`);
+  specialChars = confirm("Click OK if you would like to include special characters");
+  console.log(`Special Characters: ${specialChars}`);
+};
