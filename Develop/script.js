@@ -49,7 +49,7 @@ else if (passwordLength < 8 || passwordLength > 128) {
   console.log(`Password Length: ${passwordLength}`);
 }
 
-// Creating the criteria for the password generator 
+// Creating the criteria for the password generator and defining variables above 
 else {
   upperChars = confirm("Click OK if you would like to include uppercase characters");
   console.log(`Uppercase: ${upperChars}`);
@@ -61,7 +61,6 @@ else {
   console.log(`Special Characters: ${specialChars}`);
 };
 
-
 // If none of the options are selected
 if (!upperChars && !lowerChars && !numberChars && !specialChars) {
   userChoices = alert("You must select at least one option");
@@ -71,4 +70,94 @@ if (!upperChars && !lowerChars && !numberChars && !specialChars) {
 else if (upperChars && lowerChars && numberChars && specialChars) {
   userChoices = lowerCase.concat(upperCase, numbers, special);
   console.log(userChoices);
+}
+
+// If 3 out of the 4 criteria are true
+else if (upperChars && lowerChars && numberChars) {
+  userChoices = lowerCase.concat(upperCase, numbers);
+  console.log(userChoices);
+}
+
+else if (upperChars && lowerChars && specialChars) {
+  userChoices = lowerCase.concat(upperCase, special);
+  console.log(userChoices);
+}
+
+else if (upperChars && specialChars && numberChars) {
+  userChoices = upperCase.concat(special, numbers);
+  console.log(userChoices);
+}
+
+else if (lowerChars && specialChars && numberChars) {
+  userChoices = lowerCase.concat(special, numbers);
+  console.log(userChoices);
+}
+
+// If 2 out of the 4 criteria are true 
+else if (upperChars && lowerChars) {
+  userChoices = upperCase.concat(lowerCase);
+  console.log(userChoices);
+}
+
+else if (upperChars && numberChars) {
+  userChoices = upperCase.concat(numbers);
+  console.log(userChoices);
+}
+
+else if (upperChars && specialChars) {
+  userChoices = upperCase.concat(special);
+  console.log(userChoices);
+}
+
+else if (lowerChars && numberChars) {
+  userChoices = lowerCase.concat(numbers);
+  console.log(userChoices);
+}
+
+else if (lowerChars && specialChars) {
+  userChoices = lowerCase.concat(special);
+  console.log(userChoices);
+}
+
+else if (numberChars && specialChars) {
+  userChoices = numbers.concat(special);
+  console.log(userChoices);
+}
+
+// 1 option out of the 4 is selected
+
+else if (upperChars) {
+  userChoices = upperCase;
+  console.log(userChoices);
+}
+
+else if (lowerChars) {
+  userChoices = lowerCase;
+  console.log(userChoices);
+}
+
+else if (numberChars) {
+  userChoices = numbers;
+  console.log(userChoices);
+}
+
+else if (specialChars) {
+  userChoices = special;
+  console.log(userChoices);
+}
+
+// variable for password length
+var passwordEmpty = [];
+
+// for loop for random selection
+for (var i = 0; i < passwordLength; i++) {
+  var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+  passwordEmpty.push(allChoices);
+  console.log(allChoices);
+}
+
+// Join and return the password
+var password = passwordEmpty.join("");
+  console.log(`Your password is: ${password}`);
+  return password;
 }
