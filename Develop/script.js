@@ -2,9 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 
 // Declaring variables 
-var numberChars;
 var upperChars;
 var lowerChars;
+var numberChars;
 var specialChars;
 var passwordLength;
 var userChoices;
@@ -32,21 +32,24 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-// My Code
+// Function for generatePassword() to complete function writePassword()
 function generatePassword() {
+  // First prompt after clicking on generate password 
   passwordLength = prompt("Choose between 8 and 128 characters for your password");
   console.log(`Password Length: ${passwordLength}`);
-}
 
+// If nothing is entered
 if (!passwordLength) {
   alert ("Required");
 } 
 
+// If the password length doesn't meet the requirements
 else if (passwordLength < 8 || passwordLength > 128) {
-  passwordLength = prompt ("You must choose between 8 and 128 characters");
+  passwordLength = prompt("You must choose between 8 and 128 characters");
   console.log(`Password Length: ${passwordLength}`);
 }
 
+// Creating the criteria for the password generator 
 else {
   upperChars = confirm("Click OK if you would like to include uppercase characters");
   console.log(`Uppercase: ${upperChars}`);
@@ -57,3 +60,15 @@ else {
   specialChars = confirm("Click OK if you would like to include special characters");
   console.log(`Special Characters: ${specialChars}`);
 };
+
+
+// If none of the options are selected
+if (!upperChars && !lowerChars && !numberChars && !specialChars) {
+  userChoices = alert("You must select at least one option");
+} 
+
+// If all 4 are true 
+else if (upperChars && lowerChars && numberChars && specialChars) {
+  userChoices = lowerCase.concat(upperCase, numbers, special);
+  console.log(userChoices);
+}
